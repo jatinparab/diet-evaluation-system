@@ -1,0 +1,29 @@
+s3_angel_dump/
+*.log
+.DS_Store
+.idea
+.DS_Store/*
+.idea/*
+__pycache__/
+*.pyc
+db.sqlite3
+static/*
+
+*.csv
+*.iml
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+ddagent.env
+
+# Firebase Service Account key
+firebase-service-account-key.json
+
+celerybeat-schedule
+

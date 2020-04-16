@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="favicon.ico"/>
+    <title>DIET EVALUATION SYSTEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+        .highcharts-yaxis-grid .highcharts-grid-line {
+            display: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<h1 class="text-center p-5">DIET EVALUATION SYSTEM</h1>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<div class="container">
+    <h3>Your Results</h3>
+
+    <img class="img-responsive" style="height: 300px; width: auto;" src="{{ imagePath }}" alt="">
+    <h4>Detected Labels</h4>
+    {% for label in detected_labels %}
+        <h2>{{ label.label_title }} | {{ label.type }}</h2>
+    {% endfor %}
+<h2>Health Score ----- {{ score }} </h2>
+<a class="btn btn-lg btn-success text-white text-center" href="/?q={{ userID }}">View Report</a>
+</div>
+
+<div id="footer" style="height: 80px"></div>
+<div style="bottom:0;text-align:center">
+    <p style="font-family:'Book Antiqua';font-size: 14px">© 2020 All rights reserved </p>
+</div>
+
+</body>
+</html>
